@@ -1,69 +1,45 @@
-#include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
+
 #include "lists.h"
 
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always EXIT_SUCCESS.
- */
-int main(void)
-{
-	dlistint_t *head;
 
-	head = NULL;
-	add_dnodeint_end(&head, 0);
-	add_dnodeint_end(&head, 1);
-	add_dnodeint_end(&head, 2);
-	add_dnodeint_end(&head, 3);
-	add_dnodeint_end(&head, 4);
-	add_dnodeint_end(&head, 98);
-	add_dnodeint_end(&head, 402);
-	add_dnodeint_end(&head, 1024);
-	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 5);
-	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	print_dlistint(head);
-	free_dlistint(head);
-	return (0);
+
+/**
+
+ * print_dlistint - Prints a doubly linkedlist of integers
+
+ *
+
+ * @h: A pointer to the first element of a list
+
+ *
+
+ * Return: The number of element printed
+
+ */
+
+size_t print_dlistint(const dlistint_t *h)
+  
+{
+  
+  size_t n;
+  
+
+  
+  n = 0;
+  
+  while (h)
+    
+    {
+      
+      printf("%d\n", h->n);
+      
+      h = h->next;
+      
+      n++;
+      
+    }
+  
+  return (n);
+  
 }
